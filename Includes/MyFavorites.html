@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartBite – המועדפים שלי</title>
+    
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/HomePage.css">
+    <link rel="stylesheet" href="../CSS/MyFavorites.css">
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="HomePage.html" class="logo">SmartBite 🍏</a>
+        <nav>
+            <ul>
+                <li><a href="HomePage.html">דף הבית</a></li>
+                <li><a href="CreateMenu.html">יצירת תפריט</a></li>
+                <li><a href="ViewMenu.html">צפייה בתפריט</a></li>
+                <li><a href="SmartCart.html">סל קניות</a></li>
+                <li><a href="MyFavorites.html" class="active">❤️ מועדפים</a></li>
+                <li><a href="#" data-tooltip="טרם מומש">פרופיל</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <section class="favorites-container">
+            
+            <div class="favorites-header">
+                <h2>❤️ המועדפים שלי</h2>
+                <p>כל המנות ששמרת מחכות לך כאן.</p>
+            </div>
+
+            <div id="favoritesGrid" class="menu-grid">
+                </div>
+
+            <div id="noFavsMessage" class="empty-state-card">
+                <div class="empty-icon">🥗</div>
+                <h3>הרשימה שלך עדיין ריקה</h3>
+                <p>נראה שעדיין לא בחרת מנות מועדפות. חזור לתפריט השבועי והתחל לסמן מתכונים!</p>
+                <a href="ViewMenu.html" class="btn btn-primary">חזרה לצפייה בתפריט</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SmartBite – פרויקט גמר, פיתוח ווב.</p>
+    </footer>
+    <script src="../JS/MyFavorites.js"></script>
+</body>
+</html>

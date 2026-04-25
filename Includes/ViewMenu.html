@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartBite – צפייה בתפריט השבועי</title>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/ViewMenu.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="HomePage.html" class="logo">SmartBite 🍏</a>
+        <nav>
+            <ul>
+                <li><a href="HomePage.html">דף הבית</a></li>
+                <li><a href="CreateMenu.html">יצירת תפריט</a></li>
+                <li><a href="ViewMenu.html" class="active">צפייה בתפריט</a></li>
+                <li><a href="SmartCart.html">סל קניות</a></li>
+                <li><a href="MyFavorites.html">❤️ מועדפים</a></li>
+                <li><a href="#" data-tooltip="טרם מומש">פרופיל</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- כותרת -->
+        <header class="menu-header">
+            <h1>התפריט השבועי שלך</h1>
+            <p class="week-info" id="userGreeting">בחר/י יום ורמת עצימות לצפייה בארוחות</p>
+        </header>
+
+        <!-- בחירת עצימות (עיצוב דינמי) -->
+        <div class="load-selector" role="group" aria-label="בחירת עצימות">
+            <button class="load-btn" data-level="easy">😌 קל</button>
+            <button class="load-btn" data-level="normal">💪 רגיל</button>
+            <button class="load-btn" data-level="intense">🔥 אינטנסיבי</button>
+        </div>
+
+        <!-- טאבי ימים -->
+        <nav class="days-tabs" id="daysTabs" aria-label="בחירת יום"></nav>
+
+        <!-- פס קלוריות -->
+        <div class="calorie-bar-section">
+            <div class="calorie-summary">
+                <span class="calorie-label">
+                    <span id="loadBadge" class="load-badge normal">יום רגיל</span>
+                </span>
+                <div class="calorie-bar-wrap">
+                    <div class="calorie-bar-fill" id="calBarFill" style="width:60%"></div>
+                </div>
+                <span class="calorie-value" id="calValue">—</span>
+            </div>
+        </div>
+
+        <!-- לוח ארוחות -->
+        <section class="meals-panel load-normal" id="mealsPanel" aria-live="polite">
+            <div class="meals-grid" id="mealsGrid">
+                <!-- נבנה על ידי JS -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SmartBite – פרויקט גמר, פיתוח ווב.</p>
+        <p>
+            <a href="#" data-tooltip="טרם מומש">תנאי שימוש</a> |
+            <a href="#" data-tooltip="טרם מומש">צור קשר</a>
+        </p>
+    </footer>
+
+    <script src="../JS/ViewMenu.js"></script>
+</body>
+</html>

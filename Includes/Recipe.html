@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartBite – מתכון מלא</title>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/Recipe.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="HomePage.html" class="logo">SmartBite 🍏</a>
+        <nav>
+            <ul>
+                <li><a href="HomePage.html">דף הבית</a></li>
+                <li><a href="CreateMenu.html">יצירת תפריט</a></li>
+                <li><a href="ViewMenu.html">צפייה בתפריט</a></li>
+                <li><a href="SmartCart.html">סל קניות</a></li>
+                <li><a href="MyFavorites.html">❤️ מועדפים</a></li>
+                <li><a href="#" data-tooltip="טרם מומש">פרופיל</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="recipeContent">
+
+        <!-- Hero המתכון -->
+        <header class="recipe-hero">
+            <h1 id="recipeTitle">טוען מתכון...</h1>
+            <p class="recipe-subtitle" id="recipeSubtitle"></p>
+        </header>
+
+        <!-- פס מידע -->
+        <div class="recipe-meta-bar">
+            <div class="meta-item">
+                <span class="meta-icon">⏱</span>
+                <span class="meta-label">זמן הכנה</span>
+                <span class="meta-value" id="metaTime">—</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-icon">🔥</span>
+                <span class="meta-label">קלוריות</span>
+                <span class="meta-value" id="metaCal">—</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-icon">🍽</span>
+                <span class="meta-label">סוג ארוחה</span>
+                <span class="meta-value" id="metaType">—</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-icon">🌾</span>
+                <span class="meta-label">ללא גלוטן</span>
+                <span class="meta-value">✓</span>
+            </div>
+        </div>
+
+        <!-- גוף המתכון: מרכיבים + הכנה -->
+        <div class="recipe-body">
+
+            <!-- מרכיבים -->
+            <aside>
+                <section class="ingredients-section">
+                    <h2>מרכיבים</h2>
+                    <ul class="ingredients-list" id="ingredientsList">
+                        <!-- נבנה על ידי JS -->
+                    </ul>
+                </section>
+            </aside>
+
+            <!-- שלבי הכנה -->
+            <section class="instructions-section">
+                <h2>אופן ההכנה</h2>
+                <ol class="steps-list" id="stepsList">
+                    <!-- נבנה על ידי JS -->
+                </ol>
+
+                <!-- אנימציה: וידאו/אנימציה CSS (דרישת פרויקט) -->
+                <aside class="anim-tip">
+                    <details>
+                        <summary>💡 טיפ להכנה</summary>
+                        <p id="recipeTip">הכן מרכיבים מראש בתחילת השבוע לחיסכון בזמן!</p>
+                    </details>
+                </aside>
+            </section>
+        </div>
+
+        <div class="recipe-guide-link-wrap">
+            <button id="openCookingGuideBtn" class="fav-cooking-link" type="button">
+                למדריך בישול ←
+            </button>
+        </div>
+
+        <!-- ערכים תזונתיים -->
+        <section class="nutrition-section">
+            <h2>ערכים תזונתיים משוערים</h2>
+            <div class="nutrition-grid">
+                <div class="nutrition-item">
+                    <span class="n-value" id="nutCal">—</span>
+                    <span class="n-label">קלוריות</span>
+                </div>
+                <div class="nutrition-item">
+                    <span class="n-value" id="nutProtein">—</span>
+                    <span class="n-label">חלבון</span>
+                </div>
+                <div class="nutrition-item">
+                    <span class="n-value" id="nutCarbs">—</span>
+                    <span class="n-label">פחמימות</span>
+                </div>
+                <div class="nutrition-item">
+                    <span class="n-value" id="nutFat">—</span>
+                    <span class="n-label">שומן</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- כפתורי פעולה -->
+        <div class="recipe-actions">
+            <button class="btn btn-primary" id="addToCartBtn">
+                🛒 הוסף מרכיבים לסל הקניות
+            </button>
+            <a href="ViewMenu.html" class="btn btn-outline">
+                ← חזרה לתפריט
+            </a>
+            <a href="SmartCart.html" class="btn btn-outline">
+                לסל הקניות →
+            </a>
+        </div>
+
+        <!-- פידבק הוספה לסל -->
+        <p class="cart-feedback" id="cartFeedback"></p>
+
+    </main>
+
+    <!-- כשאין מתכון (מגיעים ישירות לדף) -->
+    <div class="no-recipe" id="noRecipe" style="display:none">
+        <h2>לא נמצא מתכון</h2>
+        <p>יש לגשת למתכון דרך <a href="ViewMenu.html">דף התפריט</a>.</p>
+        <a href="ViewMenu.html" class="btn btn-primary">לתפריט השבועי</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 SmartBite – פרויקט גמר, פיתוח ווב.</p>
+        <p>
+            <a href="#" data-tooltip="טרם מומש">תנאי שימוש</a> |
+            <a href="#" data-tooltip="טרם מומש">צור קשר</a>
+        </p>
+    </footer>
+
+    <script src="../JS/Recipe.js"></script>
+</body>
+</html>

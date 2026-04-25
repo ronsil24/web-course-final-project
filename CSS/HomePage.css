@@ -1,0 +1,236 @@
+/* ===== Hero Section ===== */
+.hero {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                      url('../Images/Homepage1.avif');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 7rem 2rem;
+    border-bottom: 4px solid rgba(46,204,113,0.3);
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    max-width: 620px;
+    margin: 0 auto 2rem;
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.8;
+}
+
+/* ===== Quick Actions ===== */
+.quick-actions {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.action-card {
+    background: rgba(46,204,113,0.06);
+    border: 1px solid rgba(46,204,113,0.18);
+    border-radius: 10px;
+    padding: 1.8rem;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+    transition: transform 0.2s, border-color 0.2s;
+    backdrop-filter: blur(4px);
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.action-card h3 {
+    font-size: 1.15rem;
+    color: var(--dark);
+    margin: 0.5rem 0;
+}
+
+.action-card p {
+    color: #666;
+    font-size: 0.95rem;
+    margin: 0.5rem 0 1rem;
+}
+
+.action-card a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.action-card a:hover { color: var(--secondary); }
+
+/* ===== Demo Menu ===== */
+.demo-menu {
+    background: var(--light);
+    padding: 3rem 2rem;
+}
+
+.demo-menu-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.meal-card {
+    background: white;
+    border: 1px solid rgba(46,204,113,0.18);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    transition: transform 0.2s;
+}
+
+.meal-card:hover { transform: translateY(-3px); }
+
+.meal-time {
+    display: block;
+    font-size: 0.82rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.meal-card h3 {
+    color: var(--dark);
+    margin: 0.4rem 0;
+    font-size: 1.05rem;
+}
+
+.meal-card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* ===== About Strip ===== */
+.about-strip {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.about-strip h2 { color: var(--primary); }
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 2rem auto 0;
+}
+
+.feature-item {
+    padding: 1rem;
+}
+
+.feature-item .icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin: 0.3rem 0 0;
+}
+/* ===== Favorites Banner ===== */
+.fav-banner {
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    color: white;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.fav-banner-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* חשוב לרספונסיביות */
+    gap: 20px;
+}
+
+.fav-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.fav-icon {
+    font-size: 2.5rem;
+}
+
+.fav-text h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: white;
+}
+
+.fav-text p {
+    margin: 5px 0 0;
+    opacity: 0.9;
+}
+
+.btn-outline-white {
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-white:hover {
+    background: white;
+    color: var(--primary);
+}
+
+/* התאמה לטלפון */
+@media (max-width: 768px) {
+    .fav-banner-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .fav-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 1.9rem; }
+    .actions-grid, .menu-grid { grid-template-columns: 1fr; }
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartBite – מדריך בישול</title>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/CookingGuide.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="HomePage.html" class="logo">SmartBite 🍏</a>
+        <nav>
+            <ul>
+                <li><a href="HomePage.html">דף הבית</a></li>
+                <li><a href="CreateMenu.html">יצירת תפריט</a></li>
+                <li><a href="ViewMenu.html">צפייה בתפריט</a></li>
+                <li><a href="SmartCart.html">סל קניות</a></li>
+                <li><a href="MyFavorites.html" class="active">❤️ מועדפים</a></li>
+                <li><a href="#" data-tooltip="טרם מומש">פרופיל</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <section class="guide-container">
+            <header class="recipe-intro">
+                <h1 id="recipeName">טוען מדריך בישול...</h1>
+                <p id="recipeDesc"></p>
+                <div class="recipe-meta-tags">
+                    <span class="tag">⏱ <span id="timeTag">--</span></span>
+                    <span class="tag">🔥 <span id="calTag">--</span></span>
+                </div>
+            </header>
+
+            <section>
+                <h2>שלבי ההכנה</h2>
+                <p class="steps-note">בשלבים שכוללים זמן הכנה יופיע טיימר אישי לאותו שלב.</p>
+                <ol class="cooking-steps" id="stepsList"></ol>
+            </section>
+
+            <div class="finish-actions">
+                <a href="MyFavorites.html" class="btn-success" id="returnButton">חזרה למועדפים</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SmartBite – פרויקט גמר, פיתוח ווב.</p>
+        <p>
+            <a href="#" data-tooltip="טרם מומש">תנאי שימוש</a> |
+            <a href="#" data-tooltip="טרם מומש">צור קשר</a>
+        </p>
+    </footer>
+
+    <script src="../JS/CookingGuide.js"></script>
+</body>
+</html>

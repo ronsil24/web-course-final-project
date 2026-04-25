@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartBite – סל קניות</title>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/SmartCart.css">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="HomePage.html" class="logo">SmartBite 🍏</a>
+        <nav>
+            <ul>
+                <li><a href="HomePage.html">דף הבית</a></li>
+                <li><a href="CreateMenu.html">יצירת תפריט</a></li>
+                <li><a href="ViewMenu.html">צפייה בתפריט</a></li>
+                <li><a href="SmartCart.html" class="active">סל קניות</a></li>
+                <li><a href="MyFavorites.html">❤️ מועדפים</a></li>
+                <li><a href="#" data-tooltip="טרם מומש">פרופיל</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- כותרת -->
+        <header class="cart-header">
+            <h1>🛒 רשימת הקניות שלך</h1>
+            <p>סמן/י פריטים שכבר יש לך בבית</p>
+        </header>
+
+        <!-- סיכום מהיר -->
+        <div class="cart-summary-bar">
+            <div class="summary-stat">
+                <span class="stat-value" id="totalItems">0</span>
+                <span class="stat-label">סה"כ פריטים</span>
+            </div>
+            <div class="summary-stat">
+                <span class="stat-value" id="checkedItems">0</span>
+                <span class="stat-label">יש בבית</span>
+            </div>
+            <div class="summary-stat">
+                <span class="stat-value" id="remainingItems">0</span>
+                <span class="stat-label">לרכישה</span>
+            </div>
+        </div>
+
+        <!-- חיפוש -->
+        <div class="page-content" style="padding-bottom:0">
+            <div class="form-group" style="max-width:400px;margin:0 auto 1rem">
+                <input type="search" id="searchInput" placeholder="🔍 חיפוש פריט...">
+            </div>
+        </div>
+
+        <!-- כפתורי פעולות -->
+        <div class="cart-actions">
+            <button class="btn btn-outline" id="printBtn">🖨 הדפסה / PDF</button>
+            <button class="btn btn-danger"  id="clearCartBtn">🗑 רוקן סל</button>
+            <a href="ViewMenu.html" class="btn btn-primary">הוסף עוד מתכונים ←</a>
+        </div>
+
+        <!-- גוף הסל -->
+        <div class="cart-body page-content" id="cartBody">
+            <!-- נבנה על ידי jQuery -->
+        </div>
+
+        <!-- סל ריק -->
+        <div class="empty-cart" id="emptyCart" style="display:none">
+            <span class="empty-icon">🛒</span>
+            <h2>הסל ריק</h2>
+            <p>גש/י לתפריט, לחץ/י על ארוחה ובחר/י "הוסף מרכיבים לסל"</p>
+            <a href="ViewMenu.html" class="btn btn-primary">לתפריט השבועי →</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SmartBite – פרויקט גמר, פיתוח ווב.</p>
+        <p>
+            <a href="#" data-tooltip="טרם מומש">תנאי שימוש</a> |
+            <a href="#" data-tooltip="טרם מומש">צור קשר</a>
+        </p>
+    </footer>
+
+    <script src="../JS/SmartCart.js"></script>
+</body>
+</html>
